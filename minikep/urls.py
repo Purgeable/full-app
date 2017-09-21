@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     url(r'^users/', include('users.urls')),
-    url(r'^api/', include('datapoint.urls')),
+    url(r'^datapoint/', include('datapoint.urls')),
 
     url(r'^admin/', admin.site.urls),
 ]
