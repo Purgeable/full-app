@@ -32,8 +32,8 @@ class Base(Configuration):
 
         'rest_framework',
 
-        'users.apps.UsersConfig',
-        'datapoint.apps.ApiConfig',
+        'users',
+        'datapoint',
     ]
 
     REST_FRAMEWORK = {
