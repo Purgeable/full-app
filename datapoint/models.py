@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+
 class Datapoint(models.Model):
     """
     Create table 'Datapoint' with fields:
