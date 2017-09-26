@@ -40,7 +40,7 @@ class Base(Configuration):
         'DEFAULT_PERMISSION_CLASSES': [
             'rest_framework.permissions.IsAdminUser',
         ],
-        'PAGE_SIZE': 10,
+        'PAGE_SIZE': 100,
         'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
     }
 

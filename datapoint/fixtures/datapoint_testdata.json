@@ -1,0 +1,137 @@
+[
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2015-11-30",
+         "freq": "m",
+         "name": "CPI_rog",
+         "value": 100.8
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2015-11-30",
+         "freq": "m",
+         "name": "RUR_EUR_eop",
+         "value": 70.39
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2015-12-31",
+         "freq": "m",
+         "name": "CPI_rog",
+         "value": 100.8
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2015-12-31",
+         "freq": "m",
+         "name": "RUR_EUR_eop",
+         "value": 79.7
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2016-10-04",
+         "freq": "d",
+         "name": "USDRUR_CB",
+         "value": 62.5477
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2016-10-05",
+         "freq": "d",
+         "name": "USDRUR_CB",
+         "value": 62.4323
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2016-10-06",
+         "freq": "d",
+         "name": "USDRUR_CB",
+         "value": 62.4583
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2016-10-07",
+         "freq": "d",
+         "name": "USDRUR_CB",
+         "value": 62.39
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2016-07-29",
+         "freq": "d",
+         "name": "BRENT",
+         "value": 42.55
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2016-08-05",
+         "freq": "d",
+         "name": "BRENT",
+         "value": 40.88
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2016-08-12",
+         "freq": "d",
+         "name": "BRENT",
+         "value": 43.63
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2016-08-19",
+         "freq": "d",
+         "name": "BRENT",
+         "value": 48.6
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2017-03-16",
+         "freq": "d",
+         "name": "BRENT",
+         "value": 50.56
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2017-03-17",
+         "freq": "d",
+         "name": "BRENT",
+         "value": 50.58
+      }
+   },
+   {
+      "model": "datapoint.datapoint",
+      "fields": {
+         "date": "2017-03-20",
+         "freq": "d",
+         "name": "BRENT",
+         "value": 50.67
+      }
+   }
+]
