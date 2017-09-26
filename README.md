@@ -22,13 +22,21 @@ Simplifications:
 
 ## Django Rest API project: mini-kep
 
-#### Install project
+###Install project
+####1. Create virtual enviroment with Python 3.6 and start it:
+    virtualenv -p python3.6 minikep
+    source /minikep/bin/activate
+####2. Clone proect from git and install requirements:
     git clone https://github.com/mini-kep/full-app.git full-app
     cd full-app
     pip install -r requirements.txt
 
-#### Run the project:
+### Run the project:
     python manage.py runserver
+ If you are not using virtual environment with defined python version 3.6 you need to follow this command:   
+    
+    python3 manage.py runserver
+ 
 
 #### Login:
     http://localhost:8000/auth/login/?next=/
@@ -42,28 +50,32 @@ Simplifications:
     http://localhost:8000/api/
 
 #### Tests:
-    You can look to api/tests to check how CRUD works for Datapoint
+Run tests:
+    
+    python manage.py test
+You can look to api/tests to check how CRUD works for Datapoint
+   
 
 #### About project:
-    It's a simple Django Rest Api project.
-    
-    Project has one model:
-        minikep.api.models.Datapoint. 
-    
-    The model has appropriate serializer:
-        minikep.api.serializers.DatapointSerializer 
-    
-    This view takes data from the model to API for CRUD operations:  
-        minikep.api.views.DatapointViewSet
-    
-    Global Django settings for whole project:
-          Minikep.minikep
+It's a simple Django Rest Api project.
+
+Project has one model:
+    minikep.api.models.Datapoint. 
+
+The model has appropriate serializer:
+    minikep.api.serializers.DatapointSerializer 
+
+This view takes data from the model to API for CRUD operations:  
+    minikep.api.views.DatapointViewSet
+
+Global Django settings for whole project:
+      Minikep.minikep
 
 #### Database
-    Now project works with sqlite, so you can easy install it locally 
-    and check how it works.
+Now project works with sqlite, so you can easy install it locally 
+and check how it works.
     
-### Travic
-    Project work with continuous integration service. Now it works with dev branch. It run all tests before deploying changes on Git.
-    .travis.yml - main configuration file for Travic
+### Travis
+Project work with continuous integration service. Now it works with dev branch. It run all tests before deploying changes on Git.
+.travis.yml - main configuration file for Travis
 
