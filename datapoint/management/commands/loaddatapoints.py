@@ -1,4 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
+from django.db import IntegrityError
+
 from datapoint.models import Datapoint
 from parsers.runner import Dataset
 
@@ -10,5 +12,13 @@ class Command(BaseCommand):
         pass
 
     def handle(self, *args, **options):
-        objs = Datapoint.objects.bulk_create(map(lambda data: Datapoint(**data), Dataset.yield_dicts()))
-        self.stdout.write(self.style.SUCCESS('Successfully loaded %s datapoints' % len(objs)))
+        saved = 0
+        for data in Dataset.yield_dicts():
+            datapoint = Datapoint(**data)
+            try:
+                datapoint.save()
+                saved += 1
+            except IntegrityError:
+                self.stdout.write(self.style.WARNING('Failed to save datapoint\n%s' % data))
+
+        self.stdout.write(self.style.SUCCESS('Successfully loaded %s datapoints' % saved))
