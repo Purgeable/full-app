@@ -3,3 +3,4 @@ django-filter==1.0.4
 djangorestframework==3.6.4
 pytz==2017.2
 django-configurations==2.0
+git+git://github.com/mini-kep/parsers.git@d04d20c4b1240ccf700bd5b6d6c64346d05f624a#egg=mini-kep-parsers
