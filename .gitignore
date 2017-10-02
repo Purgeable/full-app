@@ -1,3 +1,6 @@
 .DS_Store
 .idea/
 *.pyc
+venv
+staticfiles
+.env

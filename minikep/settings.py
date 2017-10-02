@@ -11,6 +11,7 @@ For more information on django-configuration, see
 https://django-configurations.readthedocs.io/en/stable/
 """
 
+import dj_database_url
 import os
 from configurations import Configuration
 
@@ -52,17 +53,13 @@ class Base(Configuration):
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
+        'whitenoise.middleware.WhiteNoiseMiddleware',
     ]
 
     ROOT_URLCONF = 'minikep.urls'
-    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-    STATIC_URL = '/static/'
 
-    # Extra places for collectstatic to find static files.
-    STATICFILES_DIRS = (
-        os.path.join(PROJECT_ROOT, 'static'),
-    )
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_URL = '/static/'
 
     TEMPLATES = [
         {
@@ -123,11 +120,6 @@ class Base(Configuration):
 
     USE_TZ = True
 
-    # Static files (CSS, JavaScript, Images)
-    # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
-    STATIC_URL = '/static/'
-
     LOGIN_REDIRECT_URL = '/api/'
 
 
@@ -148,8 +140,19 @@ class Prod(Base):
     # When DEBUG = False, Django doesn't work at all without a suitable value for ALLOWED_HOSTS.
     # https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/#environment-specific-settings
     # TODO: Fill a suitable value for ALLOWED_HOSTS setting.
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['*']
 
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = False
+
+    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES = {'default': dj_database_url.config()}
+    DATABASES['default'].update(db_from_env)
+
+    # Extra places for collectstatic to find static files.
+    STATICFILES_DIRS = (
+        os.path.join(Base.BASE_DIR, 'static'),
+    )
 

@@ -1,6 +1,9 @@
+dj-database-url==0.4.2
 Django==1.11.5
+django-configurations==2.0
 django-filter==1.0.4
 djangorestframework==3.6.4
+gunicorn==19.7.1
+psycopg2==2.7.3.1
 pytz==2017.2
-django-configurations==2.0
-git+git://github.com/mini-kep/parsers.git@d04d20c4b1240ccf700bd5b6d6c64346d05f624a#egg=mini-kep-parsers
+whitenoise==3.3.1
