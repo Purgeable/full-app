@@ -55,6 +55,7 @@ class Base(Configuration):
     ]
 
     ROOT_URLCONF = 'minikep.urls'
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
     TEMPLATES = [
         {
