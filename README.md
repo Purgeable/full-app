@@ -22,11 +22,11 @@ Simplifications:
 
 ## Django Rest API project: mini-kep
 
-###Install project
-####1. Create virtual enviroment with Python 3.6 and start it:
+### Install project
+#### 1. Create virtual enviroment with Python 3.6 and start it:
     virtualenv -p python3.6 minikep
     source /minikep/bin/activate
-####2. Clone proect from git and install requirements:
+#### 2. Clone proect from git and install requirements:
     git clone https://github.com/mini-kep/full-app.git full-app
     cd full-app
     pip install -r requirements.txt
@@ -78,4 +78,9 @@ and check how it works.
 ### Travis
 Project work with continuous integration service. Now it works with dev branch. It run all tests before deploying changes on Git.
 .travis.yml - main configuration file for Travis
+
+### Heroku
+    https://rocky-ridge-15355.herokuapp.com/api/
+    user: admin
+    pass: asdasdasd
 
